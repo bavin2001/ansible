@@ -1,0 +1,7 @@
+  - name: Remove a directory
+    hosts: all
+    tasks:
+      - name: Remove directory
+        file:
+          name: Student
+          state: absent

@@ -1,0 +1,7 @@
+  - name: Install Nginx, Git, Docker
+    hosts: group1
+    tasks:
+      - name: Installing
+        ansible.builtin.package:
+          name: nginx,docker,git
+          state: present

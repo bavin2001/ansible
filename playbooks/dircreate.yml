@@ -1,0 +1,7 @@
+  - name: Create a directory in target node
+    hosts: all
+    tasks:
+      - name: Directory Creation
+        file:
+          name: Student
+          state: directory

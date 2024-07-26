@@ -1,0 +1,7 @@
+  - name: Copy a file from cpntrol node to target node
+    hosts: group1
+    tasks:
+      - name: copy file
+        copy:
+          src: /home/bavin/file.txt
+          dest: /home/bavin/

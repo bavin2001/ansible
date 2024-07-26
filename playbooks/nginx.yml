@@ -1,0 +1,12 @@
+  - name: Installation of nginx and start service
+    hosts: group1
+    tasks:
+      - name: nginx installation
+        package:
+          name: nginx
+          state: present
+      - name: Start Service
+        service:
+          name: nginx
+          enabled: yes
+          state: started

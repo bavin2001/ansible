@@ -1,0 +1,8 @@
+  - name: User remove
+    hosts: group1
+    tasks:
+      - name: remove user
+        user:
+          name: Devops
+          state: absent
+          remove: yes

@@ -1,0 +1,7 @@
+  - name: Create a file in targetnode
+    hosts: group1
+    tasks:
+      - name: Create a file
+        file:
+          name: Student.txt
+          state: touch

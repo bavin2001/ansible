@@ -1,0 +1,7 @@
+  - name: CREATE A DIRECTORY IN TARGET NODE
+    hosts: group1
+    tasks:
+      - name: Directory creation
+        file:
+          path: /tmp/testdir
+          state: directory

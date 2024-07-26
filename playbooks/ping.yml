@@ -1,0 +1,5 @@
+  - name: Ping service
+    hosts: all
+    tasks:
+      - name: Ping check
+        ping:

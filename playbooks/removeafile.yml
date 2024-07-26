@@ -1,0 +1,7 @@
+  - name: Remove a file from target node
+    hosts: group1
+    tasks:
+      - name: Remove
+        file:
+          path: /home/bavin/file.txt
+          state: absent

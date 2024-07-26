@@ -1,0 +1,7 @@
+  - name: Install a 1.20.1 version of nginx
+    hosts: group1
+    tasks:
+      - name: nginx-1.20.1 install
+        ansible.builtin.yum:
+          name: nginx-1.20.1
+          state: present

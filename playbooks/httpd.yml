@@ -1,0 +1,12 @@
+  - name: Installation and starting service of httpd
+    hosts: group1
+    tasks:
+      - name: installation of httpd
+        yum:
+          name: httpd
+          state: present
+      - name: Starting the service
+        systemd:
+          name: httpd
+          enabled: yes
+          state: started

@@ -1,0 +1,9 @@
+  - name: Create user
+    hosts: group1
+    tasks:
+      - name: Creating a user
+        user:
+          name: Devops
+          state: present
+          create_home: yes
+          shell: /bin/bash

@@ -1,0 +1,40 @@
+all:
+  hosts:
+    node1:
+      ansible_user: bavin
+      ansible_host: 172.16.70.25
+      ansible_become: yes
+      ansible_become_method: sudo
+      ansible_become_pass: asd123.
+    node2:
+      ansible_user: bavin
+      ansible_host: 172.16.70.26
+      ansible_become: yes
+      ansible_become_method: sudo
+      ansible_become_pass: asd123.
+    node3:
+      ansible_user: ng
+      ansible_host: 172.16.70.19
+      ansible_become: yes
+      ansible_become_method: sudo
+      ansible_become_pass: asd123.
+    node4:
+      ansible_user: njl
+      ansible_host: 172.16.70.16
+      ansible_become: yes
+      ansible_become_method: sudo
+      ansible_become_pass: asd123.
+
+  children:
+    group1:
+      hosts:
+        node1:
+        node2:
+    group2:
+      hosts:
+        node3:
+        node4:
+    group3:
+      children:
+        group1:
+        group2:
