@@ -1,0 +1,20 @@
+  - name: Create web page using httpd
+    hosts: group1
+    tasks:
+      - name: Install httpd
+        package:
+          name: httpd
+          state: present
+      - name: Start httpd
+        service:
+          name: httpd
+          enabled: yes
+          state: started
+      - name: Copy file CSS files
+        copy:
+          src: /home/bavin/rough/css1/
+          dest: /var/www/html/
+      - name:
+        service:
+          name: httpd
+          state: restarted 
