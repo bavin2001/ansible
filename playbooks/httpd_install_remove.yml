@@ -1,0 +1,24 @@
+  - name: Install, start, enable, disable, stop and remove httpd
+    hosts: group1
+    tasks:
+      - name: Install httpd
+        package:
+          name: httpd
+          state: present
+      
+      - name: Start and enable httpd
+        service:
+          name: httpd
+          enabled: yes
+          state: started
+
+      - name: Disable and stop httpd
+        service:
+          name: httpd
+          enabled: no
+          state: stopped
+
+      - name: Stop httpd
+        package:
+          name: httpd
+          state: absent

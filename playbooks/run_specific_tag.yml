@@ -1,0 +1,21 @@
+  - name: Run specific task while from diffrent task in a playbook
+    hosts: group1
+    tasks:
+      - name: Install httpd
+        package:
+          name: httpd
+          state: present
+        tags:
+          httpd
+      - name: Install nginx
+        package:
+          name: nginx
+          state: present
+        tags:
+          nginx
+      - name: Create a new file
+        file:
+          name: New
+          state: directory
+        tags:
+          directory
