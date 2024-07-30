@@ -1,4 +1,5 @@
-  - name: Run specific task while from diffrent task in a playbook
+#use --tags <tags name> while run the playbook
+- name: Run specific task while from diffrent task in a playbook
     hosts: group1
     tasks:
       - name: Install httpd
