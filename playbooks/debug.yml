@@ -1,0 +1,12 @@
+  - name: Print the statement with IP, Hostname, OS, Cores, Architecture
+    hosts: node1
+    tasks:
+      - name: Print all
+        ansible.builtin.debug:
+          msg: |
+            "IP Address: {{ansible_host}}"
+            "Hostname: {{ansible_hostname}}"
+            "OS Info: {{ansible_distribution}}"
+            "Core Information: {{ansible_processor_cores}}"
+            "Architecture: {{ansible_architecture}}"
+
