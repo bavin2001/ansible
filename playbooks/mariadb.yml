@@ -1,0 +1,28 @@
+  - name:
+    hosts: node1
+    tasks:
+      - name: Install Mariadb
+        package:
+          name: mariadb-server
+          state: present
+      - name: Start and enable mariadb
+        service:
+          name: mariadb
+          enabled: yes
+          state: started
+      - name:
+        package:
+          name: python3-PyMySQL
+          state: present
+      - name: Create database
+        community.mysql.mysql_db:
+          name: bavin_db
+          state: present
+          login_unix_socket: /var/lib/mysql/mysql.sock  #should use this command in database creations
+      - name: Create a user
+        community.mysql.mysql_user:
+          name: user1
+          password: 123
+          state: present
+          priv: '*.*:ALL'
+          login_unix_socket: /var/lib/mysql/mysql.sock
