@@ -30,7 +30,8 @@
           priv: '*.*:ALL'
           state: present
           login_unix_socket: /var/lib/mysql/mysql.sock
-        register: output   # To register or view the details of the current task by calling in debug
+        register: output
+
       - name: Debug1
         debug:
           var: output
