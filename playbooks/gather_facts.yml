@@ -1,5 +1,10 @@
   - name: Gather facts
-    hosts: all
+    hosts: node1
     tasks:
       - name: Gather facts
         gather_facts:
+          filter: "system*"  #This is used to filter a specific one like grep
+        register: details
+      - name: debug gather facts
+        debug:
+          var: details

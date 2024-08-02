@@ -1,155 +1,3 @@
-ssh-keygen -t rsa
-cd .ssh/
-ls
-ssh-copy-id bavin@172.16.70.25
-ssh bavin@172.16.70.25
-ssh-copy-id bavin@172.16.70.26
-ssh bavin@172.16.70.26
-clear
-cd
-sudo dnf install python3-pip
-pip install ansible -y
-pip install ansible
-ansible --help
-mkdir ansible
-cs ansible/
-cd ansible/
-ls
-vim inventory
-ansible -m ping -i inventory all
-vim inventory
-mv inventory inventory.yml
-vim inventory.yml 
-ansible -m ping -i inventory.yml targ1
-ansible -m ping -i inventory.yml targ2
-ansible -m dnf -i inventory.yml targ2 -a "name=httpd state=present"
-ansible -m dnf -i inventory.yml targ2 -a "name=httpd state=present" -b
-vim inventory.yml 
-ansible -m dnf -i inventory.yml targ2 -a "name=httpd state=present" -b
-vim inventory.yml 
-ansible -m dnf -i inventory.yml targ2 -a "name=httpd state=present" -b
-ansible -m yum -i inventory.yml all -a "name=httpd state=present" -b
-ansible -m dnf -i inventory.yml all -a "name=nginx state=present" -b
-ansible -m service -i inventory.yml all -a "name=nginx state=started enabled=yes" -b
-vim inventory
-vim inven.yml
-sudo vim /etc/hosts
-ansible -m command -i inven.yml -a "df -h" all
-ansible -m command -i inven.yml -a "df -h" www.dog.com
-history
-vim inventory.yml 
-vim inven
-ls
-vim inven.yml 
-ansible -m shell -i inven.yml -a "mkdir dog" www.dog.com
-ansible -m shell -i inven.yml -a "mkdir cat" www.dog.com
-ansible -m shell -i inven.yml -a "mkdir /home/bavin/cat" www.dog.com
-ansible -m file -i inven.yml -a "path=/home/bavin/animal state=directory" www.dog.com
-ansible -m file -i inven.yml -a "path=/home/bavin/animal state=directory" www.cat.com
-cat /etc/hosts
-vim /etc/hosts
-sudo vim /etc/hosts
-ansible -m file -i inven.yml -a "path=/home/bavin/animal state=directory" www.dog.com
-ansible -m file -i inven.yml -a "path=/home/bavin/animal state=directory" www.cat.com
-ansible -m file -i inven.yml -a "path=/home/bavin/bird state=directory" www.cat.com
-ansible -m file -i inventory.yml -a "path=/home/bavin/bird state=directory" targ2
-clear
-ls
-cd ansible/
-clear
-ls
-cat inventory.yml 
-ansible -m command -i inventory.yml -a "uptime" targ1
-ansible -m command -i inventory.yml -a "df" targ1
-ansible -m command -i inventory.yml -a "df -h" targ1
-ansible -m command -i inventory.yml -a "df -h" all
-ansible -m command -i inventory.yml -a "lsblk" all
-ansible -m command -i inventory.yml -a "lsblk -a" all
-ansible -m command -i inventory.yml -a "mkdir bavin" all
-ansible -m command -i inventory.yml -a "rm bavin" all
-ansible -m command -i inventory.yml -a "rmdir bavin" all
-ansible -m command -i inventory.yml -a "rmdir bird" all
-ansible -m command -i inventory.yml -a "rmdir cat" targ2
-ansible -m command -i inventory.yml -a "rmdir cat" targ1
-ansible -m command -i inventory.yml -a "rmdir animal" targ1
-ansible -m command -i inventory.yml -a "rmdir dog" targ1
-ansible -m dnf -i inventory.yml all -a "name=nginx state=latest" -b
-ansible -m dnf -i inventory.yml all -a "name=nginx state=latest" all
-ansible -m dnf -i inventory.yml all -a "name=nginx state=latest" -b
-ansible -m package -i inventory.yml all -a "name=httpd state=latest" -b
-ansible -m systemd -i inventory.yml all -a "name=httpd state=present enabled=yes"
-ansible -m systemd -i inventory.yml all -a "name=httpd state=present enabled=yes" -b
-ansible -m systemd -i inventory.yml all -a "name=httpd state=started enabled=yes" -b
-ansible -m systemd -i inventory.yml all -a "name=nginx state=stopped enabled=no" -b
-ansible -m systemd -i inventory.yml all -a "name=httpd state=started enabled=yes" -b
-ansible -m file -i inventory.yml -a "name= bavin state=directory" all
-ansible -m file -i inventory.yml -a "name=bavin state=directory" all
-ansible -m file -i inventory.yml -a "name=f1 state=file" all
-ansible -m file -i inventory.yml -a "name=f1 state=touch" all
-ansible -m file -i inventory.yml -a "name=f1 state=absent" all
-ansible -m file -i inventory.yml -a "name=bavin state=absent" all
-ansible -m user -a "name=kumar state=present create_home=yes shell=/bin/bash" -b
-ansible all -m user -a "name=kumar state=present create_home=yes shell=/bin/bash" -b
-ansible all -m user -a "name=kumar state=present create_home=yes shell=/bin/bash" -b -i inventory.yml 
-history
-ansible all -m user -a "name=kumar state=absent" -b -i inventory.yml 
-ansible all -m user -a "name=kumar state=present create_home=yes shell=/bin/bash" -b
-ansible all -m user -a "name=kumar state=present create_home=yes shell=/bin/bash" -b -i inventory.yml 
-ansible all -m user -a "name=kumar create_home=yes shell=/bin/bash" -b -i inventory.yml 
-ansible all -m gather facts -i inventory.yml 
-ansible all -m gather_facts -i inventory.yml 
-ansible all -m yum -a "name=httpd state=present enbled=yes" -i inventory.yml 
-ansible all -m yum -a "name=httpd state=present enble=yes" -i inventory.yml 
-ansible all -m yum -a "name=httpd state=present enabled=yes" -i inventory.yml 
-ansible all -m yum -a "name=httpd state=present enable=yes" -i inventory.yml 
-ansible all -m yum -a "name=httpd state=present" -i inventory.yml 
-ansible all -m yum -a "name=httpd state=started enabled=yes" -i inventory.yml 
-ansible all -m systemd -a "name=httpd state=present enable=yes" -i inventory.yml 
-ansible all -m systemd -a "name=httpd state=started enable=yes" -i inventory.yml 
-ansible all -m systemd -a "name= state=started enabled=yes" -i inventory.yml 
-ansible all -m yum -a "name=nginx state=present" -i inventory.yml 
-ansible all -m yum -a "name=nginx state=absent" -i inventory.yml 
-ansible all -m dnf -a "name=httpd state=absent" -i inventory.yml 
-ls
-cd
-ls
-touch file.txt
-ls
-vim file.txt 
-cd ansible/
-ls
-ansible all -m copy -i inventory.yml -a "src=/home/bavin/file.txt dest=/home/bavin/"
-ansible all -m command -i inventory.yml -a "rm file.txt"
-ansible all -m user -i inventory -a "name=Devops" -b
-ansible all -m user -i inventory.yml -a "name=Devops" -b
-ansible all -m user -i inventory.yml -a "name=Devops state=absent" -b
-cd
-mkdir sample
-ls
-cd ansible/
-ansible all -m copy -i inventory.yml -a "src=/home/bavin/sample dest=/home/bavin/"
-mkdir ~/sample/bavin
-ansible all -m copy -i inventory.yml -a "src=/home/bavin/sample dest=/home/bavin/"
-historyscp /home/bavin/sample bavin@172.16.70.26
-history
-vim inventory.yml 
-ssh bavin@172.16.70.26
-ssh bavin@172.16.70.25
-cd ansible/
-ansible -m dnf -i inventory.yml -a "name=* state=latest" -b all
-clear
-ansible --help
-clear
-history
-cd ansible/
-clear
-ansible all -m command -i inventory.yml -a "mkdir student" 
-ansible all -m file -i inventory.yml -a "name=student state=touch" 
-ansible all -m file -i inventory.yml -a "name=student.txt state=touch" 
-ansible all -m command -i inventory.yml -a "df -h" 
-ansible all -m command -i inventory.yml -a "uptime" 
-cat /proc/meminfo 
-ansible all -m command -i inventory.yml -a "cat /proc/meminfo" 
 free
 ansible all -m command -i inventory.yml -a "free" 
 ansible all -m command -i inventory.yml -a "top" 
@@ -719,3 +567,434 @@ ansible-playbook -i inventory.yml web.yml
 vim web.yml 
 vim playbooks/web2httpd.yml 
 vim web.yml 
+ls
+cd ansible/
+ls
+cd playbooks/
+ls
+vim web2httpd.yml 
+vim httpd
+vim httpd_install_remove.yml 
+vim run_specific_tag.yml 
+cd
+clear
+ls
+ls -a
+less .bash_history 
+touch history
+ls
+cp .bash_history history 
+ls
+vim history 
+mv history ansible/
+cd ansible/
+ls
+mkdir rough
+mv screenshots/ rough/
+ls
+mv history rough/
+ls
+git status
+git add .
+git status
+clear
+git commit -m "First commit"
+git push origin main
+git status
+clear
+ls
+ls playbooks/
+mv playbooks/ping.yml .
+ansible-playbook -i inventory.yml ping.yml -C
+cd ansible/
+ks
+ls
+ls playbooks/
+vim mariadb.yml
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+sudo dnf search python3
+sudo dnf search python3 | grep -i PymySql
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+clear
+ls
+cd ansible/
+ls
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-galaxy collection list
+ansible-galaxy collection install community.mysql
+ansible-galaxy collection list
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ansible-playbook -i inventory.yml mariadb.yml 
+vim mariadb.yml 
+ls
+mv ping.yml playbooks/
+mv mariadb.yml playbooks/
+ls
+mv web.yml playbooks/
+clear
+ls
+git status
+git add .
+git commit -m "First commit"
+git push origin main
+clear
+ls
+clear
+cd
+ls
+mkdir shell
+ls
+mv shell Shellscript
+ls
+cd Shellscript/
+git clone https://github.com/njl010/BASH.git
+ls
+cd BASH/
+ls
+mv * ..
+ls
+cd
+ls
+cd Shellscript/
+ls
+rm BASH/
+rm -rf BASH/
+ls
+clear
+ls
+chmod +x sudo_privillage.sh dir_in_dir.sh great_or_less.sh 
+ls
+clear
+ls
+git clone https://github.com/manu-peter/shell-scripting.git
+ls
+cd shell-scripting/
+ls
+mv * ..
+cd ..
+ls
+ls shell-scripting/
+clear
+ls
+rm shell-scripting/
+rm -rf shell-scripting/
+clear
+ls
+git init
+ls -a
+git commit -m "First commit"
+git add .
+git status
+git commit -m "First commit"
+git push origin main
+git status
+ls
+git remote add origin git@github.com:bavin2001/Shellscript.git
+git push origin main
+history | grep git
+git branch -M main
+git push origin main
+ls
+clear
+cd
+ls
+clear
+ls
+mkdir k8
+cd k8
+https://github.com/manu-peter/kubernetes.git
+ls
+git clone https://github.com/manu-peter/kubernetes.git
+ls
+mv kubernetes/* .
+ls
+ls kubernetes/
+rm -rf kubernetes/
+ls
+clear
+ls
+cd
+ls
+mv k8 kubernetes
+ls
+cd kubernetes/
+git init
+git status
+clear
+git add .
+git status
+git commit -m "First commit"
+git branch -M main
+git push origin main
+git remote add origin git@github.com:bavin2001/kubernetes.git
+git push origin main
+clear
+ls
+cd
+ls
+clear
+ls
+cd ansible/
+ls
+clear
+ls playbooks/
+vim debug
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+vim debug.yml
+ansible-playbook -i inventory.yml debug.yml 
+mv debug.yml playbooks/
+ls
+git add .
+git status
+git commit -m "First commit"
+gir push origin main
+git push origin main
+clear
+ls -a
+vim ansible/inventory.yml 
+;s ansible/
+ls ansible/
+ls ansible/playbooks/
+cd ansible/
+ls
+clear
+ls
+mv playbooks/debug.yml .
+ls
+ansible-playbook debug.yml -i inventory.yml 
+vim debug.yml 
+mv debug.yml playbooks/
+vim playbooks/mariadb.yml 
+vim variable.yml
+cat /etc/sudoers
+sudo cat /etc/sudoers
+sudo vim /etc/sudoers
+ls
+clear
+ls
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+wq
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ls
+mv variable.yml playbooks/
+ls
+git status
+git add .
+git status
+git commit -m "First commit"
+git push origin main
+git status
+ls playbooks/
+git status
+ls playbooks/
+mv playbooks/gather.yml .
+ls
+vim gather.yml 
+mv gather.yml gather_facts.yml
+ansible-playbook -i inventory.yml gather_facts.yml 
+mv gather_facts.yml playbooks/
+mv playbooks/variable.yml .
+ls
+clear
+ls
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+vim variable.yml 
+ansible-playbook variable.yml -i inventory.yml 
+git status
+mv variable.yml playbooks/
+ls
+git status
+ls
+ls -l
+rm '
+git add .
+git commit -m "First commit"
+git push origin main
+history | grep git
+git push origin main
+git pull
+ls
+git push origin main
+vim ansible/playbooks/mariadb.yml 
+ls
+cd ansible/
+ls
+git status
+ls -a
+cd playbooks/
+ls -al
+ls -a
+ls
+cd
+l
+s
+ls
+clear
+cd asn
+cd ansible/
+git status
+git rm playbooks/.mariadb.yml.swp 
+git status
+git commit -m "Change"
+git push origin main
+git pull origin main
+git commit
+git push origin main
+git pull --rebase origin main
+git push origin main
+clear
+ls
+ls playbooks/
+mv playbooks/web2httpd.yml .
+ls
+clear
+ls
+vim web2httpd.yml 
+vim playbooks/mariadb.yml 
+vim playbooks/variable.yml 
+vim web2httpd.yml 
+ansible-playbook web2httpd.yml -i inventory.yml 
+vim web2httpd.yml 
+ansible-playbook web2httpd.yml -i inventory.yml 
+vim web2httpd.yml 
+ls playbooks/
+vim playbooks/directcreate.yml 
+vim web2httpd.yml 
+ansible-playbook web2httpd.yml -i inventory.yml 
+vim web2httpd.yml 
+ansible-playbook web2httpd.yml -i inventory.yml 
+vim web2httpd.yml 
+ansible-playbook web2httpd.yml -i inventory.yml 
+ls
+mv web2httpd.yml playbooks/
+ls
+clear
+git status
+git add .
+git status
+git commit
+git commit -m "Changed"
+git push origin main
+git status
+clear
+ls
+mv playbooks/gather_facts.yml .
+ls
+clear
+ls
+clear
+ls
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim playbooks/web2httpd.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+cp ~/.bash_history rough/history 
+vim rough/history 
+history
+cp ~/.bash_history rough/history 
+cat rough/history 
+ls rough/history 
+less rough/history 
+cd
+ls
+vim .bash_history 
+cd ansible/
+ls
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ansible-playbook gather_facts.yml -i inventory.yml 
+vim gather_facts.yml 
+ls
+exit
