@@ -1,5 +1,5 @@
   - name: Create web page using httpd
-    hosts: group1
+    hosts: node1
     tasks:
       - name: Install httpd
         package:
@@ -14,7 +14,20 @@
         copy:
           src: /home/bavin/rough/css1/
           dest: /var/www/html/
+        register: process    #this is to check the datailed view of the process this command will be called in the last task by debug. "process" here represent as variable
       - name:
         service:
           name: httpd
-          state: restarted 
+          state: restarted
+      - name: Add http to the firewall
+        firewalld:
+          service: http
+          permanent: yes
+          state: enabled
+      - name:
+        service:
+          name: firewalld
+          state: restarted
+      - name:
+        debug:
+          var: process # this is called as referred in the copy task register
