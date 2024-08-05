@@ -1,8 +1,8 @@
   - name: Variable in mariadb
-    hosts: group1
+    hosts: node1
     vars:
-      name: bavindb   #this is variable declaration you can use any variable as your choice
-      user: bavin
+      name: tom  #this  is variable declaration you can use any variable as your choice
+      user: jerry
       passd: 12
     tasks:
       - name: Install mariadb
@@ -36,7 +36,7 @@
           var: output
       - name: Debug2
         debug:
-          var: resu
+          var: user
       - name: Debug3
         debug:
           msg: "The database named {{name}} is created"

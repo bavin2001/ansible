@@ -3,5 +3,6 @@
     tasks:
       - name: copy file
         copy:
-          src: /home/bavin/file.txt
+          src: /home/bavin/ansible/bavin
           dest: /home/bavin/
+          backup: yes
