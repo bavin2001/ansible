@@ -1,9 +1,9 @@
   - name: Variable in mariadb
-    hosts: node1
+    hosts: group1
     vars:
-      eman: bavindb   #this is variable declaration you can use any variable as your choice
-      resu: bavin
-      ssap: 123
+      name: bavindb   #this is variable declaration you can use any variable as your choice
+      user: bavin
+      passd: 12
     tasks:
       - name: Install mariadb
         ansible.builtin.package:
@@ -20,13 +20,13 @@
           state: present
       - name: Create a database
         mysql_db:
-          name: "{{eman}}"
+          name: "{{name}}"
           state: present
           login_unix_socket: /var/lib/mysql/mysql.sock
       - name: Create a user
         mysql_user:
-          name: "{{resu}}"
-          password: "{{ssap}}"
+          name: "{{user}}"
+          password: "{{passd}}"
           priv: '*.*:ALL'
           state: present
           login_unix_socket: /var/lib/mysql/mysql.sock
@@ -39,4 +39,4 @@
           var: resu
       - name: Debug3
         debug:
-          msg: "The database named {{eman}} is created"
+          msg: "The database named {{name}} is created"
