@@ -1,0 +1,12 @@
+# Check the priority of variable between playbook variable and command line variable
+---
+  - name: Create a variable and check 
+    hosts: node1
+    vars:
+      deploy_path: /var/www/html
+    tasks:
+      - name: debug
+        debug:
+          var: deploy_path
+...
+#It is clear that the variable in the command line is prioritarise more

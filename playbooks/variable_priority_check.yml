@@ -1,0 +1,12 @@
+#Observe which variable(hosts,group, playbook) value is used by printing it with debug module
+---
+  - name: Observe which variable(hosts,group, playbook) value is used by printing it with debug module
+    hosts: node1
+    vars:
+      timeout: 90
+    tasks:
+      - name: debug
+        debug:
+          var: timeout
+...
+#After running the playbook it is clear that the variable in playbook has the higher priority also if we add a command in the execution by adding -e the command will get the first priority

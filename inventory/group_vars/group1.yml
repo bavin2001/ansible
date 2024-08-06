@@ -1,3 +1,4 @@
 name: nivab_db
 user: nivab
 pass: 123
+timeout: 30
