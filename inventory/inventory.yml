@@ -27,11 +27,19 @@ all:
       ansible_become_method: sudo
       ansible_become_pass: asd123.
 
+    node5:
+      ansible_user: bavin
+      ansible_host: 172.16.70.28
+      ansible_become: yes
+      ansible_become_method: sudo
+      ansible_become_pass: asd123.
+
   children:
     group1:
       hosts:
         node1:
         node2:
+        node5:
     group2:
       hosts:
         node3:

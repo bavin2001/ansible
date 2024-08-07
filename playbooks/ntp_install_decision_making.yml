@@ -1,0 +1,10 @@
+  - name: Install ntp in both ubuntu and Alma linux
+    hosts: group1
+    tasks:
+      - name: Install ntp in Alma linux
+        package:
+          name: ntp
+          state: present
+        when:
+          - ansible_distribution == "AlmaLinux"
+

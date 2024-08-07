@@ -3,7 +3,7 @@
     tasks:
       - name: Gather facts
         gather_facts:
-          filter: "system*"  #This is used to filter a specific one like grep
+          filter: "*version*"  #This is used to filter a specific one like grep
         register: details
       - name: debug gather facts
         debug:
