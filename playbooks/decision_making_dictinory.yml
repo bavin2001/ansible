@@ -1,0 +1,14 @@
+  - name: Install cron in alma and alma
+    hosts: group1
+    tasks:
+      - name: install cron in Ubuntu
+        ansible.builtin.apt:
+          name: cronie
+          state: present
+        when: ansible_os_family == "Debian"
+      - name: Install service apache2 in Alma Linux
+        ansible.builtin.dnf:
+          name: cronie
+          state: present
+        when: ansible_facts['distribution_major_version'] == "9"
+          #ansible_os_family == "RedHat"

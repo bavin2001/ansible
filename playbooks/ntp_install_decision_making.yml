@@ -1,10 +1,28 @@
   - name: Install ntp in both ubuntu and Alma linux
     hosts: group1
     tasks:
-      - name: Install ntp in Alma linux
-        package:
+      - name: Install ntp(chrony) in Alma linux
+        ansible.builtin.package:
+          name: chrony
+          state: present
+        when: ansible_distribution == "AlmaLinux" or ansible_python_version == "3.12.3"
+
+      - name: Start and enable service chrony in Alma Linux
+        ansible.builtin.service:
+          name: chronyd
+          enabled: yes
+          state: started
+        when: ansible_distribution == "AlmaLinux" or ansible_python_version == "3.12.3"
+
+      - name: Install ntp in Ubuntu
+        ansible.builtin.package:
           name: ntp
           state: present
-        when:
-          - ansible_distribution == "AlmaLinux"
+        when: ansible_distribution == "Ubuntu"
 
+      - name: Start and enable service ntp in Ubuntu
+        ansible.builtin.systemd:
+          name: ntpd
+          enabled: yes
+          state: started
+        when: ansible_distribution == "Ubuntu"

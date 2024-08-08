@@ -1,0 +1,13 @@
+  - name: Use loop
+    hosts: group1
+    tasks:
+      - name: Install using loop
+        package:
+          name: "{{item}}"
+          state: present
+        loop:
+          - chrony
+          - zip
+          - unzip
+          - git
+          - vim
