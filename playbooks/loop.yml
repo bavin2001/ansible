@@ -6,8 +6,19 @@
           name: "{{item}}"
           state: present
         loop:
+          - nginx
+            #- mariadb
           - chrony
-          - zip
-          - unzip
-          - git
-          - vim
+      - name:
+        service:
+          name: "{{item}}"
+          enabled: yes
+          state: started
+        loop: 
+            - nginx
+            #- mariadb
+            - chronyd
+        register: output
+          #  - name: Debug
+          # debug:
+          #var: output
