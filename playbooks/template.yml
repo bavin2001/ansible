@@ -1,0 +1,9 @@
+  - name: Using template module
+    hosts: node2
+    vars:
+      index1: index.html
+    tasks:
+      - name: Template
+        ansible.builtin.template:
+          src: /home/bavin/ansible/foo.j2
+          dest: /home/bavin/conf/file.conf

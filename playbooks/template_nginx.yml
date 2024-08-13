@@ -1,0 +1,32 @@
+  - name: Start enable nginx and do server block method using template
+    hosts: node2
+    tasks:
+      - name: Install nginx
+        ansible.builtin.package:
+          name: nginx
+          state: present
+      - name: Start and Enable nginx
+        ansible.builtin.service:
+          name: nginx
+          enabled: yes
+          state: started
+      - name: Server block using template
+        ansible.builtin.template:
+          src: /home/bavin/ansible/jinja2/foo.j2
+          dest: /etc/nginx/conf.d/xnign.conf
+      - name: Copy css
+        ansible.builtin.copy:
+          src: /home/bavin/rough/css1
+          dest: /var/www/html
+          owner: nginx
+          group: nginx
+          mode: u=rw,g=r,o=r
+      - name: Test
+        ansible.builtin.command: sudo nginx -t
+      - name: restart
+        ansible.builtin.service:
+          name: "{{item}}"
+          state: restarted
+        loop:
+          - nginx
+          - sshd

@@ -1,0 +1,20 @@
+  - name: Create a playbook using loop and when
+    hosts: group1
+    tasks:
+      - name: Install chrony and ntp packages
+        package:
+          name: "{{item.name}}"
+          state: present
+        loop:
+          - { name: chrony, distro: AlmaLinux}
+          - { name: ntp, distro: Ubuntu}
+        when: ansible_distribution == item.distro
+      - name: Start and enable chronyd service on alma and ntp service on ubuntu
+        service:
+          name: "{{ item.name }}"
+          enabled: yes
+          state: started
+        loop:
+          - { name: chronyd, distro: AlmaLinux }
+          - { name: ntp, distro: Ubuntu }
+        when: ansible_distribution == item.distro

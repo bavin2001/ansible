@@ -1,22 +1,30 @@
 #use --tags <tags name> while run the playbook
-- name: Run specific task while from diffrent task in a playbook
-    hosts: group1
+  - name: Run specific task while from diffrent task in a playbook
+    hosts: node1
     tasks:
       - name: Install httpd
         package:
           name: httpd
           state: present
         tags:
-          httpd
+          - httpd
+          - dptth
       - name: Install nginx
         package:
           name: nginx
           state: present
         tags:
-          nginx
-      - name: Create a new file
+          - nginx
+          - xnign
+      - name: Create a new Directory
         file:
           name: New
           state: directory
         tags:
-          directory
+          - dir
+          - rid
+      - name: Create a new file
+        command: touch file1
+        tags:
+          - file
+          - elif

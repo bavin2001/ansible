@@ -1,129 +1,3 @@
-sshpass -V
-sudo dnf install sshpass
-sshpass
-sshpass -p
-
-ansible-playbook -i inventory.yml nginx.yml  -kK
-passwd
-clear
-vim inventory.yml 
-ansible
-sshpass -V
-vim inventory.yml 
-ansible-playbook -i inventory.yml nginx.yml -kK -l node1
-ansible-playbook -i inventory.yml nginx.yml -kK -l node2
-clear
-ansible group1 -m pakage -i inventory.yml -a "name=httpd state=absent"
-ansible group1 -m pakage -i inventory.yml -a "name=nginx state=absent"
-ansible group1 -m package -i inventory.yml -a "name=nginx state=absent"
-ansible group1 -m package -i inventory.yml -a "name=httpd state=absent"
-ansible group1 -m package -i inventory.yml -a "name=httpd state=present" -v
-ansible group1 -m package -i inventory.yml -a "name=httpd state=absent"
-ansible group1 -m package -i inventory.yml -a "name=httpd state=present" -vv
-ansible group1 -m package -i inventory.yml -a "name=httpd state=absent"
-ansible group1 -m package -i inventory.yml -a "name=httpd state=present" -vvv
-ansible group1 -m package -i inventory.yml -a "name=httpd state=absent"
-ls
-mv nginx.yml playbooks/
-ls
-clear
-vim apply_in_specific_target.yml
-ls
-ansible-playbook -i inventory.yml apply_in_specific_target.yml 
-vim apply_in_specific_target.yml
-ansible-playbook -i inventory.yml apply_in_specific_target.yml 
-vim apply_in_specific_target.yml
-ansible-playbook -i inventory.yml apply_in_specific_target.yml 
-less playbooks/postsql.yml 
-vim apply_in_specific_target.yml
-ansible-playbook -i inventory.yml apply_in_specific_target.yml 
-vim apply_in_specific_target.yml
-ansible-playbook -i inventory.yml apply_in_specific_target.yml '
-ansible-playbook -i inventory.yml apply_in_specific_target.yml 
-vim apply_in_specific_target.yml
-ansible-playbook -i inventory.yml apply_in_specific_target.yml 
-ls
-mv apply_in_specific_target.yml playbooks/
-git status
-git add .
-git status
-git commit -m "First commit"
-git push -u origin main
-git status
-clear
-ls
-clear
-ls
-vim playbooks/web.yml 
-ls
-ls ~
-ls ~/rough/
-ls ~/rough/css1/clear
-ls
-vim web2httpd.yml
-cd ~/rough/css1/
-pwd
-cd ~/ansible/
-ls
-vim web2httpd.yml 
-ansible group1 -m package -i inventory.yml -a "name=httpd state=absent"
-ansible group1 -m package -i inventory.yml -a "name=nginx state=absent"
-ansible-playbook -i inventory.yml web2httpd.yml 
-vim web2httpd.yml 
-ansible-playbook -i inventory.yml web2httpd.yml 
-ls
-ls mv web2httpd.yml playbooks/
-mv web2httpd.yml playbooks/
-ls
-git status
-git add .
-git status
-git push -u origin main
-git status
-git push -u origin main
-git status
-git commit -m "First commit"
-git push -u origin main
-git status
-clear
-ls
-cd ansible/
-ls
-clear
-ls
-vim httpd_install_remove.yml
-ls
-ansible-playbook -i inventory.yml httpd_install_remove.yml 
-vim httpd_install_remove.yml
-ansible-playbook -i inventory.yml httpd_install_remove.yml 
-ls
-mv httpd_install_remove.yml playbooks/
-ls
-vim run_specific_tag.yml
-ansible-playbook -i inventory.yml run_specific_tag.yml --tags nginx
-ansible-playbook -i inventory.yml run_specific_tag.yml --tags directory
-vim run_specific_tag.yml
-ansible-playbook -i inventory.yml run_specific_tag.yml --tags httpd,directory
-vim run_specific_tag.yml
-ls
-mv run_specific_tag.yml playbooks/
-clear
-ls
-git
-clear
-git status
-git add .
-git status
-git commit -m "First commit
-git commit -m "First commit"
-git push origin main
-clear
-ls
-vim playbooks/run_specific_tag.yml 
-ls playbooks/
-vim playbooks/web2httpd.yml 
-mv playbooks/web.yml .
-clear
 ls
 ansible-playbook -i inventory.yml web.yml 
 vim web.yml 
@@ -998,3 +872,129 @@ git add .
 git commit -m "aug 7 1:34" 
 git push origin main
 clear
+ls
+cd ansible/
+ls
+ls playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible -m setup -i inventory/inventory.yml 
+history | grep setup
+ansible -m setup -i inventory/inventory.yml group1
+ansible -m setup -i inventory/inventory.yml group1 | grep version
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ls
+clear
+ls
+vim apache_in_decision_making.yml
+ansible -m setup -i inventory/inventory.yml group1 | grep debian
+ansible -m setup -i inventory/inventory.yml group1 | grep Debian
+ansible -m setup -i inventory/inventory.yml group1 | grep os_family
+ansible -m setup -i inventory/inventory.yml group1 | grep RedHat
+vim apache_in_decision_making.yml
+ansible-playbook apache_in_decision_making.yml -i inventory/inventory.yml 
+vim apache_in_decision_making.yml
+ansible-playbook apache_in_decision_making.yml -i inventory/inventory.yml 
+vim apache_in_decision_making.yml
+ansible-playbook apache_in_decision_making.yml -i inventory/inventory.yml 
+vim apache_in_decision_making.yml
+ansible-playbook apache_in_decision_making.yml -i inventory/inventory.yml 
+cd /etc/
+ls
+cd ..
+cd
+vim /etc/ansible/ansible.config
+vim /etc/ansible/ansible_config
+cd /etc
+ls
+cd /etc/ansible
+ls -a
+ls -la
+cd /etc/ansible/ansible.cfg
+ansible --version
+clear
+ls
+cd
+cd ansible/
+ls
+clear
+ls
+vim apache_in_decision_making.yml 
+ansible-playbook apache_in_decision_making.yml -i inventory/inventory.yml 
+clear
+history
+clear
+ls
+clear
+vim apache_in_decision_making.yml 
+ansible -m setup -i inventory/inventory.yml group1 | grep Debian
+ansible -m setup -i inventory/inventory.yml group1 | grep version
+vim apache_in_decision_making.yml 
+ansible-playbook apache_in_decision_making.yml -i inventory/inventory.yml 
+vim apache_in_decision_making.yml 
+mv apache_in_decision_making.yml playbooks/
+ls
+vim decision_making_dictinory.yml
+ansible-playbook decision_making_dictinory.yml -i inventory/inventory.yml 
+vim decision_making_dictinory.yml
+ansible-playbook decision_making_dictinory.yml -i inventory/inventory.yml 
+vim decision_making_dictinory.yml
+ansible-playbook decision_making_dictinory.yml -i inventory/inventory.yml 
+vim decision_making_dictinory.yml
+ansible-playbook decision_making_dictinory.yml -i inventory/inventory.yml 
+vim decision_making_dictinory.yml
+ansible-playbook decision_making_dictinory.yml -i inventory/inventory.yml 
+vim decision_making_dictinory.yml
+ansible-playbook decision_making_dictinory.yml -i inventory/inventory.yml 
+ls
+mv decision_making_dictinory.yml playbooks/
+vim loop.yml
+ansible-playbook -i inventory/inventory.yml loop.yml 
+vim loop.yml
+ansible-playbook -i inventory/inventory.yml loop.yml 
+vim loop.yml
+ansible-playbook -i inventory/inventory.yml loop.yml 
+ls
+mv loop.yml playbooks/
+ls
+clear
+ls
+clear
+cp ~/.bash_history rough/history 
+ls
+celar
+clear
+ls
+git add .
+git commit -m "Aug8 1:19"
+git pudh origin main
+git push origin main
+clear
+ls
+clear
+ls
+clear
+ls
+cd ansible/
+ls
+vim playbooks/loop.yml 
+clear
+vim playbooks/loop.yml 
+vim playbooks/loop.yml
+cd ansible/
+vim playbooks/loop.yml
