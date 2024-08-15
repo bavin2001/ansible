@@ -1,292 +1,4 @@
 ls
-ansible-playbook -i inventory.yml web.yml 
-vim web.yml 
-vim playbooks/web2httpd.yml 
-vim web.yml 
-ls
-cd ansible/
-ls
-cd playbooks/
-ls
-vim web2httpd.yml 
-vim httpd
-vim httpd_install_remove.yml 
-vim run_specific_tag.yml 
-cd
-clear
-ls
-ls -a
-less .bash_history 
-touch history
-ls
-cp .bash_history history 
-ls
-vim history 
-mv history ansible/
-cd ansible/
-ls
-mkdir rough
-mv screenshots/ rough/
-ls
-mv history rough/
-ls
-git status
-git add .
-git status
-clear
-git commit -m "First commit"
-git push origin main
-git status
-clear
-ls
-ls playbooks/
-mv playbooks/ping.yml .
-ansible-playbook -i inventory.yml ping.yml -C
-cd ansible/
-ks
-ls
-ls playbooks/
-vim mariadb.yml
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-sudo dnf search python3
-sudo dnf search python3 | grep -i PymySql
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-clear
-ls
-cd ansible/
-ls
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-galaxy collection list
-ansible-galaxy collection install community.mysql
-ansible-galaxy collection list
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ansible-playbook -i inventory.yml mariadb.yml 
-vim mariadb.yml 
-ls
-mv ping.yml playbooks/
-mv mariadb.yml playbooks/
-ls
-mv web.yml playbooks/
-clear
-ls
-git status
-git add .
-git commit -m "First commit"
-git push origin main
-clear
-ls
-clear
-cd
-ls
-mkdir shell
-ls
-mv shell Shellscript
-ls
-cd Shellscript/
-git clone https://github.com/njl010/BASH.git
-ls
-cd BASH/
-ls
-mv * ..
-ls
-cd
-ls
-cd Shellscript/
-ls
-rm BASH/
-rm -rf BASH/
-ls
-clear
-ls
-chmod +x sudo_privillage.sh dir_in_dir.sh great_or_less.sh 
-ls
-clear
-ls
-git clone https://github.com/manu-peter/shell-scripting.git
-ls
-cd shell-scripting/
-ls
-mv * ..
-cd ..
-ls
-ls shell-scripting/
-clear
-ls
-rm shell-scripting/
-rm -rf shell-scripting/
-clear
-ls
-git init
-ls -a
-git commit -m "First commit"
-git add .
-git status
-git commit -m "First commit"
-git push origin main
-git status
-ls
-git remote add origin git@github.com:bavin2001/Shellscript.git
-git push origin main
-history | grep git
-git branch -M main
-git push origin main
-ls
-clear
-cd
-ls
-clear
-ls
-mkdir k8
-cd k8
-https://github.com/manu-peter/kubernetes.git
-ls
-git clone https://github.com/manu-peter/kubernetes.git
-ls
-mv kubernetes/* .
-ls
-ls kubernetes/
-rm -rf kubernetes/
-ls
-clear
-ls
-cd
-ls
-mv k8 kubernetes
-ls
-cd kubernetes/
-git init
-git status
-clear
-git add .
-git status
-git commit -m "First commit"
-git branch -M main
-git push origin main
-git remote add origin git@github.com:bavin2001/kubernetes.git
-git push origin main
-clear
-ls
-cd
-ls
-clear
-ls
-cd ansible/
-ls
-clear
-ls playbooks/
-vim debug
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-vim debug.yml
-ansible-playbook -i inventory.yml debug.yml 
-mv debug.yml playbooks/
-ls
-git add .
-git status
-git commit -m "First commit"
-gir push origin main
-git push origin main
-clear
-ls -a
-vim ansible/inventory.yml 
-;s ansible/
-ls ansible/
-ls ansible/playbooks/
-cd ansible/
-ls
-clear
-ls
-mv playbooks/debug.yml .
-ls
-ansible-playbook debug.yml -i inventory.yml 
-vim debug.yml 
-mv debug.yml playbooks/
-vim playbooks/mariadb.yml 
-vim variable.yml
-cat /etc/sudoers
-sudo cat /etc/sudoers
-sudo vim /etc/sudoers
-ls
-clear
-ls
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-wq
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ls
-mv variable.yml playbooks/
-ls
 git status
 git add .
 git status
@@ -998,3 +710,291 @@ vim playbooks/loop.yml
 vim playbooks/loop.yml
 cd ansible/
 vim playbooks/loop.yml
+clear
+cd ansible/
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+ld playbooks/vim playbooks/install3service.yml 
+vim playbooks/install3service.yml 
+vim playbooks/file_variable.yml 
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --tags "alma"
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --tags "ubu"
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --tags "alma,ubu"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --tags "alma,ubu"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --tags "amla,ntu"
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --tags "amla,ntu,alma,ubu"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --skip-tags "ubu"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --skip-tags "ubu" --tags "ntu"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --skip-tags "ubu" --tags "alma"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --skip-tags "ubu" --tags "alma,ntu"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --skip-tags "ubu" --tags "alma"
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --skip-tags "ubu" --tags "ntu"
+vim playbooks/ntp_install_decision_making.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/ntp_install_decision_making.yml --skip-tags "ubu" --tags "ubu"
+vim playbooks/ntp_install_decision_making.yml 
+vim playbooks/loop.yml 
+ls
+git add .
+git commit -m "aug 9 12.42"
+git push origin main
+ls
+cp ~/.bash_history rough/history 
+vim playbooks/loop.yml 
+vim playbooks/decision_making_dictinory.yml 
+vim playbooks/loop.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml 
+vim playbooks/decision_making_dictinory.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+vim playbooks/loop.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/loop.yml 
+clear
+ls pl
+cd ansible/
+clear
+ls
+ls playbooks/
+vim playbooks/run_specific_tag.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml -t "dir"
+vim playbooks/run_specific_tag.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml -t "dir"
+vim playbooks/run_specific_tag.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml -t "dir"
+vim playbooks/run_specific_tag.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml --skip-tags "dptth,xnign"
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml -tags "nginx"
+vim playbooks/run_specific_tag.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml --skip-tags "file,dir"
+vim playbooks/run_specific_tag.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml --skip-tags "file,dir"
+vim playbooks/run_specific_tag.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/run_specific_tag.yml --skip-tags "file,dir"
+vim playbooks/run_specific_tag.yml 
+vim playbooks/loop.yml 
+vim playbooks/decision_making_dictinory.yml 
+ls
+mv template_nginx.yml playbooks/
+ls
+mkdir jinja2
+mv foo.j2 jinja2/
+ls
+vim playbooks/template_nginx.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+vim loop_when.yml
+ansible-playbook -i inventory/inventory.yml loop_when.yml 
+ls
+mv loop_when.yml playbooks/
+mv playbooks/template_nginx.yml .
+ls
+clear
+ls
+vim template_nginx.yml 
+ls playbooks/
+vim playbooks/copyfile_and_backup.yml
+mv playbooks/template_nginx.yml .
+ls
+vim template_nginx.yml 
+ls -a
+rm -rf .template_nginx.yml.swp 
+ls
+clear
+vim template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml template_nginx.yml 
+vim template_nginx.yml 
+ls
+mv template_nginx.yml playbooks/
+ls
+clear
+ls
+git add .
+git commit -m "Aug 13 1:15"
+git push origin main
+git status
+clear
+ls
+clear
+clear
+ls
+cd ansible/
+ls
+mv template.yml playbooks/
+ls
+clear
+ls
+ls playbooks/
+vim template_nginx.yml 
+clear
+ls
+cd ansible/
+clear
+ls
+ls playbooks/template_nginx.yml 
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+vim playbooks/install3service.yml
+vim playbooks/run_specific_tag.yml 
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+clear
+exit

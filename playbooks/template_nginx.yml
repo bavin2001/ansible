@@ -1,5 +1,7 @@
   - name: Start enable nginx and do server block method using template
-    hosts: node2
+    hosts:
+      - node1
+      - node2
     tasks:
       - name: Install nginx
         ansible.builtin.package:
@@ -14,19 +16,35 @@
         ansible.builtin.template:
           src: /home/bavin/ansible/jinja2/foo.j2
           dest: /etc/nginx/conf.d/xnign.conf
+        notify: 
+          - changed
       - name: Copy css
         ansible.builtin.copy:
-          src: /home/bavin/rough/css1
-          dest: /var/www/html
+          src: /home/bavin/rough/
+          dest: /var/www/html/
           owner: nginx
           group: nginx
           mode: u=rw,g=r,o=r
+        tags:
+          ngin
+      - name: Firewall update
+        firewalld:
+          port: 80/tcp
+          state: enabled
+          permanent: yes
+        notify:
+          - reload firewall
       - name: Test
         ansible.builtin.command: sudo nginx -t
-      - name: restart
+    handlers:
+      - name: changed
         ansible.builtin.service:
           name: "{{item}}"
-          state: restarted
+          state: reloaded
         loop:
           - nginx
           - sshd
+      - name: reload firewall
+        systemd:
+          name: firewalld
+          state: restarted
