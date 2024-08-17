@@ -1,0 +1,23 @@
+---
+# tasks file for role1
+- name: Install httpd
+  import_tasks: file.yml
+- name: Start and enable httpd
+  service:
+    name: httpd
+    enabled: yes
+    state: started
+- name: Config change using template
+  template:
+    src: httpconf.j2
+    dest: /etc/httpd/conf.d/httpj2.conf
+  notify: hey
+- name: Copy Css files to target node
+  copy:
+    src: files/
+    dest: /var/www/html
+    owner: apache
+    group: apache
+    mode: u=rw,g=r,o=r
+  tags:
+    - copy

@@ -1,0 +1,6 @@
+<VirtualHost *:{{port}}>
+	DocumentRoot {{root}}
+	ServerName {{servername}}
+	ErrorLog /var/log/httpd/error.log
+	CustomLog /var/log/httpd/access.log combined
+</VirtualHost>

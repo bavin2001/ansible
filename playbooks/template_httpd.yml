@@ -1,32 +1,30 @@
-#Here is an example for nginx congif change using template. Also tags and handlers used  
-
-  - name: Start enable nginx and do server block method using template
+  - name: Start enable httpd and do server block method using template
     hosts: node2
     tasks:
-      - name: Install nginx
+      - name: Install httpd
         ansible.builtin.package:
-          name: nginx
+          name: httpd
           state: present
-      - name: Start and Enable nginx
+      - name: Start and Enable httpd
         ansible.builtin.service:
-          name: nginx
+          name: httpd
           enabled: yes
           state: started
       - name: Server block using template
         ansible.builtin.template:
           src: /home/bavin/ansible/jinja2/foo.j2
-          dest: /etc/nginx/conf.d/xnign.conf
-        notify: 
+          dest: /etc/httpd/conf.d/xnign.conf
+        notify:
           - hello
           - reload firewall
       - name: Meta Handlers
-        meta: flush_handlers     #This command and task used to run the handlers instantly ()
+        meta: flush_handlers
       - name: Copy css
         ansible.builtin.copy:
           src: /home/bavin/rough/
           dest: /var/www/html/
-          owner: nginx
-          group: nginx
+          owner: httpd
+          group: httpd
           mode: u=rw,g=r,o=r
         tags:
           ngin
@@ -38,22 +36,23 @@
         notify:
           - reload firewall
       - name: Test
-        ansible.builtin.command: sudo nginx -t
+        ansible.builtin.command: sudo httpd -t
     handlers:
       - name: changed
         ansible.builtin.service:
           name: "{{item}}"
           state: reloaded
         loop:
-          - nginx
+          - httpd
           - sshd
         listen: hello            #we can also use listen keyword for calling or naming the handlers in notify (Naming handlers)
           #notify: reload firewall   This is chaining handler we use to triger another handler to run
       - name: changed
         service:
-          name: nginx
+          name: httpd
           state: reloaded
       - name: reload firewall
         systemd:
           name: firewalld
           state: restarted
+

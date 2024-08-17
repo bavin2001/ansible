@@ -1,0 +1,6 @@
+---
+# vars file for role1
+port: 80
+root: /var/www/html/
+servername: "{{ansible_hostname}}"
+...
