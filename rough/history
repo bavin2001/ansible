@@ -1,229 +1,3 @@
-ls
-git status
-git add .
-git status
-git commit -m "First commit"
-git push origin main
-git status
-ls playbooks/
-git status
-ls playbooks/
-mv playbooks/gather.yml .
-ls
-vim gather.yml 
-mv gather.yml gather_facts.yml
-ansible-playbook -i inventory.yml gather_facts.yml 
-mv gather_facts.yml playbooks/
-mv playbooks/variable.yml .
-ls
-clear
-ls
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-vim variable.yml 
-ansible-playbook variable.yml -i inventory.yml 
-git status
-mv variable.yml playbooks/
-ls
-git status
-ls
-ls -l
-rm '
-git add .
-git commit -m "First commit"
-git push origin main
-history | grep git
-git push origin main
-git pull
-ls
-git push origin main
-vim ansible/playbooks/mariadb.yml 
-ls
-cd ansible/
-ls
-git status
-ls -a
-cd playbooks/
-ls -al
-ls -a
-ls
-cd
-l
-s
-ls
-clear
-cd asn
-cd ansible/
-git status
-git rm playbooks/.mariadb.yml.swp 
-git status
-git commit -m "Change"
-git push origin main
-git pull origin main
-git commit
-git push origin main
-git pull --rebase origin main
-git push origin main
-clear
-ls
-ls playbooks/
-mv playbooks/web2httpd.yml .
-ls
-clear
-ls
-vim web2httpd.yml 
-vim playbooks/mariadb.yml 
-vim playbooks/variable.yml 
-vim web2httpd.yml 
-ansible-playbook web2httpd.yml -i inventory.yml 
-vim web2httpd.yml 
-ansible-playbook web2httpd.yml -i inventory.yml 
-vim web2httpd.yml 
-ls playbooks/
-vim playbooks/directcreate.yml 
-vim web2httpd.yml 
-ansible-playbook web2httpd.yml -i inventory.yml 
-vim web2httpd.yml 
-ansible-playbook web2httpd.yml -i inventory.yml 
-vim web2httpd.yml 
-ansible-playbook web2httpd.yml -i inventory.yml 
-ls
-mv web2httpd.yml playbooks/
-ls
-clear
-git status
-git add .
-git status
-git commit
-git commit -m "Changed"
-git push origin main
-git status
-clear
-ls
-mv playbooks/gather_facts.yml .
-ls
-clear
-ls
-clear
-ls
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim playbooks/web2httpd.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-cp ~/.bash_history rough/history 
-vim rough/history 
-history
-cp ~/.bash_history rough/history 
-cat rough/history 
-ls rough/history 
-less rough/history 
-cd
-ls
-vim .bash_history 
-cd ansible/
-ls
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ansible-playbook gather_facts.yml -i inventory.yml 
-vim gather_facts.yml 
-ls
-exit
-vim .bash_history 
-cp .bash_history ansible/rough/history 
-vim ansible/rough/history 
-cd ansible/
-ls
-mv gather_facts.yml playbooks/
-ls
-clear
-git add .
-git status
-git commit -m "Changed"
-git push origin main
-clear
-git status
-clear
-vim rough/history 
-tree
-ls
-rm '
-
-
-
-mkdir '
-ls
-rm -rf '
-
-
-
-
-
-
-clear
-ls
-ls -b
-ls 'some\'file'
-
-
-
-
-clear
-git status
-clear
-ls
-cd ansible/
-ls
-mkdir inventory
-mv inventory inventory
-mv inventory.yml inventory
-ls
-ls inventory/
-ls
-clear
-ls
-ls inventory/'
-ls inventory
-clear
-ls
-ls playbooks/
-clear
-cd inventory/
-ls
-clear
-mkdir host_vars
-ls
-cd host_vars/
-ls
-vim ../../playbooks/variable.yml 
-ls
-node1.yml
-vim node1.yml
-ls
-cd 
-cd ansible/
-ls
-mv playbooks/variable.yml .
-ls
-vim variable.yml 
-ansible-playbook variable.yml -i inventory/inventory.yml 
 vim inventory/host_vars/node1.yml 
 ansible-playbook variable.yml -i inventory/inventory.yml 
 ls
@@ -998,3 +772,229 @@ ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-
 ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
 clear
 exit
+clear
+ls
+cd ansible/
+ls
+clear
+ls
+ls -l playbooks/
+ls -lt playbooks/
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ls
+cd
+ls
+cd rough/
+ls
+rm -r css1/
+ls
+clear
+wget https://www.free-css.com/assets/files/free-css-templates/download/page294/namari.zip
+ls
+unzip namari.zip 
+ls
+ls css/
+clear
+ls
+rm -r css/ fonts/ images/ index.html 'Read Me First.txt' js/
+ls
+clear
+mkdir css1
+unzip namari.zip css1/
+unzip namari.zip
+clear
+ls
+ls bavin/
+rm -r bavin/ namari.zip 
+ls
+clear
+cd
+ls
+cd ansible/
+ls
+vim jinja2/
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml 
+vim jinja2/foo.j2 
+ls ~/rough/
+ls css
+cd ~/rough/
+ls css
+ls css1
+rm css1
+rm -r css1
+clear
+ls
+wq
+cd
+cd ansible/
+ls
+vim jinja2/
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ls
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml 
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml 
+ls
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml 
+cp ~/.bash_history rough/history 
+ls
+git add .
+git commit -m "Aug 15 12:41"
+git status
+git push origin main
+ls
+ls playbooks/
+vim playbooks/run_specific_tag.yml 
+vim handlers_meta.yml
+ls
+vim playbooks/template_
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml 
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-task "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-task "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-task "ngin"
+clear
+ls
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook playbooks/template_nginx.yml -i inventory/inventory.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "nginx"
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim jinja2/foo.j2 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+ls
+clear
+cd ansible/
+ls -lt playbooks/
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+vim jinja2/foo.j2 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+ansible-playbook -i inventory/inventory.yml playbooks/template_nginx.yml --skip-tags "ngin"
+vim playbooks/template_nginx.yml 
+vim template_httpd.yml
+ls
+cd jinja2/
+mkdir http.j2
+ls
+mv http.j2/
+rm -rf http.j2/
+ls
+clear
+cd ..
+ls
+mv template_httpd.yml playbooks/
+ls
+cat bavin 
+rm bavin 
+la
+ls
+celar
+ls
+clear
+ls
+ansible-galaxy init role1
+ls
+tree rol1
+tree roll1
+tree role1
+cd ro
+cd role1/
+cat README.md 
+vim README.md 
+cd ..
+ls
+vim playbooks/template_nginx.yml 
+clear
+exit
+clear
+ls
+cd ansible/
+ls
+cd role1/
+ls
+tree
+vim meta/main.yml 
+ls
+vim vars/main.yml 
+cd files/
+ls
+wget https://www.free-css.com/assets/files/free-css-templates/download/page295/sbs.zip
+ls
+unzip sbs.zip 
+ls
+rm cd ..
+cd ..
+ls
+cd tests/
+ls
+vim inventory 
+vim test.yml 
+cd ..
+vim meta/main.yml 
+ls
+cd files/
+ls
+rm -rf sbs.zip 
+ls
+mv sbs-html/* .
+ls
+rm sbs-html/
+rm -r sbs-html/
+ls
+clear
+ls
+clear
+cd ..
+ls
+vim handlers/main.yml 
+cat handlers/main.yml 
+clear
+ls
+vim tasks/
+vim tasks/main.yml 
+vim ../playbooks/template_nginx.yml 
+cat handlers/main.yml 
+vim handlers/main.yml 
+vim tasks/main.yml 
+clear
+cd ansible/playbooks/
+vim template_nginx.yml 
+vim ../jinja2/foo.j2 
+cd ..
+vim inventory/inventory.yml 
